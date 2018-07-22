@@ -40,7 +40,7 @@ class RedditUi extends PolymerElement {
         }
       </style>
       <paper-spinner id="spinner" active=[[active]]></paper-spinner>
-      <paper-item>[[game]] - Hot Reddit Posts (Swipe to remove)</paper-item>
+      <paper-item><h3>[[game]] - Hot Reddit Posts (Swipe to remove)</h3></paper-item>
 
       <template is="dom-repeat" items="[[posts]]">
         <iron-swipeable-container class="swipeable-container">
