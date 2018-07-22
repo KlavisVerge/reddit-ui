@@ -57,6 +57,11 @@ class RedditUi extends PolymerElement {
         type: String,
         value: 'Fortnite',
       },
+      active: {
+        type: Boolean,
+        reflectToAttribute: true,
+        value: true
+      },
       posts: {
         type: Array
       }
@@ -81,6 +86,7 @@ class RedditUi extends PolymerElement {
       console.error('Error:', error);
     })
     .then(response => {
+      this.$.spinner.active = false;
       this.posts = response.data;
     });
   }
