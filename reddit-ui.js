@@ -1,5 +1,4 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import "@polymer/iron-swipeable-container/iron-swipeable-container.js";
 import '@polymer/paper-card/paper-card.js';
 import "@polymer/paper-item/paper-item.js";
 import "@polymer/paper-spinner/paper-spinner.js";
@@ -32,27 +31,21 @@ class RedditUi extends PolymerElement {
           width: 95%;
         }
 
-        .swipeable-container {
-          width: 100%;
-        }
-
         .padding-class {
           padding: 15px 0 15px 0;
         }
       </style>
       <paper-spinner id="spinner" active=[[active]]></paper-spinner>
-      <paper-item><h3>[[game]] - Hot Reddit Posts (Swipe to remove)</h3></paper-item>
+      <paper-item><h3>[[game]] - Hot Reddit Posts</h3></paper-item>
 
       <template is="dom-repeat" items="[[posts]]">
-        <iron-swipeable-container class="swipeable-container">
-          <div class="wrapper">
-            <paper-card>
-              <div class="padding-class">
-                <a href=[[item.permalink]] target="_blank">[[item.title]]</a>
-              </div>
-            </paper-card>
-          </div>
-        </iron-swipeable-container>
+        <div class="wrapper">
+          <paper-card>
+            <div class="padding-class">
+              <a href=[[item.permalink]] target="_blank">[[item.title]]</a>
+            </div>
+          </paper-card>
+        </div>
       </template>
     `;
   }

@@ -2,7 +2,6 @@
   "name": "reddit-ui",
   "main": "reddit-ui.js",
   "dependencies": {
-    "@polymer/iron-swipeable-container": "^3.0.0-pre.21",
     "@polymer/paper-card": "^3.0.0-pre.21",
     "@polymer/paper-item": "^3.0.0-pre.21",
     "@polymer/paper-spinner": "^3.0.0-pre.21",
