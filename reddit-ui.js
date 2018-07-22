@@ -27,6 +27,10 @@ class RedditUi extends PolymerElement {
           padding: 15px 0 15px 0;
         }
 
+        paper-card {
+          width: 100%;
+        }
+
         .swipeable-container {
           width: 100%;
         }
