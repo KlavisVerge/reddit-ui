@@ -1,4 +1,5 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+import "@polymer/iron-swipeable-container/iron-swipeable-container.js";
 import '@polymer/paper-card/paper-card.js';
 import "@polymer/paper-item/paper-item.js";
 import "@polymer/paper-spinner/paper-spinner.js";
