@@ -81,7 +81,7 @@ class RedditUi extends PolymerElement {
       console.error('Error:', error);
     })
     .then(response => {
-      this.posts = response;
+      this.posts = response.data;
     });
   }
 }
