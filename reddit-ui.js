@@ -29,11 +29,15 @@ class RedditUi extends PolymerElement {
         }
 
         paper-card {
-          width: 95%;
+          width: 100%;
         }
 
         .padding-class {
           padding: 15px 0 15px 0;
+        }
+
+        a {
+          text-decoration: none;
         }
       </style>
       <paper-spinner id="spinner" active=[[active]]></paper-spinner>
