@@ -75,6 +75,7 @@ class RedditUi extends PolymerElement {
     super.ready();
     var url = 'https://3oemw4weak.execute-api.us-east-1.amazonaws.com/api/reddit-api';
     var data = {game: this.game};
+    let err = false;
 
     fetch(url, {
       method: 'POST',
@@ -87,8 +88,12 @@ class RedditUi extends PolymerElement {
     .catch(error => {
       this.$.spinner.active = false;
       console.error('Error:', error);
+      err = true;
     })
     .then(response => {
+      if(err){
+        return;
+      }
       this.$.spinner.active = false;
       this.posts = response.data;
     });
