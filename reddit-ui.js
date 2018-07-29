@@ -41,7 +41,7 @@ class RedditUi extends PolymerElement {
         }
       </style>
       <paper-spinner id="spinner" active=[[active]]></paper-spinner>
-      <paper-item><h3>[[game]] - Hot Reddit Posts</h3></paper-item>
+      <paper-item><h3>[[displayName]] - Hot Reddit Posts</h3></paper-item>
 
       <template is="dom-repeat" items="[[posts]]">
         <div class="wrapper">
@@ -59,6 +59,10 @@ class RedditUi extends PolymerElement {
       game: {
         type: String,
         value: 'Fortnite',
+      },
+      displayname: {
+        type: String,
+        value: 'Fortnite'
       },
       active: {
         type: Boolean,
