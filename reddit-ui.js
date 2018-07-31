@@ -77,13 +77,11 @@ class RedditUi extends PolymerElement {
 
   ready() {
     super.ready();
-    var url = 'https://3oemw4weak.execute-api.us-east-1.amazonaws.com/api/reddit-api';
-    var data = {game: this.game};
+    var url = 'https://xupmhdl2g5.execute-api.us-east-1.amazonaws.com/api/reddit-api?game=' + this.game;
     let err = false;
 
     fetch(url, {
-      method: 'POST',
-      body: JSON.stringify(data),
+      method: 'GET',
       headers:{
         'Accept': 'application/json',
         'Content-Type': 'application/json'
